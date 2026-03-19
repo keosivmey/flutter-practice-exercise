@@ -5,9 +5,7 @@ import 'package:bla_bla_car/week8_BLA_MVVM/data/dummy_data.dart';
 class LocationRepositoryMock extends LocationRepository {
   
   @override
-
-  Future<List<Location>> getLocations() async {
-    await Future.delayed(Duration(seconds: 2));
+  List<Location> getLocations() {
     return fakeLocations;
   }
 }

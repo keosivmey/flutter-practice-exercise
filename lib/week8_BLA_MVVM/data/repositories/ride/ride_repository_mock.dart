@@ -4,8 +4,7 @@ import 'package:bla_bla_car/week8_BLA_MVVM/data/dummy_data.dart';
 
 class RideRepositoryMock extends RideRepository {
   @override
-  Future<List<Ride>> getLocations() async {
-    await Future.delayed(Duration(seconds: 2));
+  List<Ride> getRides() {
     return fakeRides;
   }
 }

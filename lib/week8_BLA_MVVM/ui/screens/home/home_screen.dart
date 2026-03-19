@@ -7,7 +7,7 @@ import '../../widgets/pickers/bla_ride_preference_picker.dart';
 import '../rides_selection/rides_selection_screen.dart';
 import 'widgets/home_history_tile.dart';
 
-const String blablaHomeImagePath = 'assets/images/blabla_home.png';
+const String blablaHomeImagePath = '../assets/images/blabla_home.png';
 
 ///
 /// This screen allows user to:

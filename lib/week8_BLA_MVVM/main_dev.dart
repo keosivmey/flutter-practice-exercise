@@ -7,6 +7,7 @@ import 'package:bla_bla_car/week8_BLA_MVVM/data/repositories/ride_preference/rid
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'main_common.dart';
+import 'ui/states/ride_preference_state.dart';
 
 // provider dependencies
 List<SingleChildWidget> get devProviders {
@@ -20,6 +21,11 @@ List<SingleChildWidget> get devProviders {
     //ride preference repository
     Provider<RidePreferenceRepository>(
       create: (_) => RidePreferenceRepositoryMock(),
+    ),
+
+    //inject ride preference state
+    ChangeNotifierProvider<RidePreferenceState>(
+      create: (context) => RidePreferenceState(repository: RidePreferenceRepositoryMock()),
     ),
   ];
 }

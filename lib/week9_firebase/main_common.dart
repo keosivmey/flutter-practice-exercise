@@ -55,13 +55,10 @@ class _MyAppState extends State<MyApp> {
               icon: Icon(Icons.library_music),
               label: 'Library',
             ),
+            BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Artists'),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               label: 'Settings',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.star),
-              label: 'Artists',
             ),
           ],
         ),

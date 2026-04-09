@@ -27,28 +27,35 @@ class LibraryItemTile extends StatelessWidget {
         child: ListTile(
           onTap: onTap,
           title: Text(data.song.title),
-          subtitle: Row(children: [Text("${data.song.duration.inMinutes} mins"), SizedBox(width: 20), Text(data.artist.name), SizedBox(width: 20), Text(data.artist.genre)]),
-          leading: CircleAvatar(backgroundImage: NetworkImage(data.song.imageUrl.toString())),
-          trailing: Expanded(
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                if (isPlaying)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: Text("Playing", style: TextStyle(color: Colors.amber)),
-                  ),
-                Text("${data.song.likes}"),
-                IconButton(
-                  onPressed: onLike,
-                  icon: Icon(Icons.favorite, color: Colors.lightBlue),
+          subtitle: Row(
+            children: [
+              Text("${data.song.duration.inMinutes} mins"),
+              SizedBox(width: 20),
+              Text(data.artist.name),
+              SizedBox(width: 20),
+              Text(data.artist.genre),
+            ],
+          ),
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(data.song.imageUrl.toString()),
+          ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (isPlaying)
+                Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Text("Playing", style: TextStyle(color: Colors.amber)),
                 ),
-              ],
-            ),
+              Text("${data.song.likes}"),
+              IconButton(
+                onPressed: onLike,
+                icon: Icon(Icons.favorite, color: Colors.lightBlue),
+              ),
+            ],
           ),
         ),
       ),
-      
     );
   }
 }
